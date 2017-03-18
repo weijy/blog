@@ -1,5 +1,5 @@
 body {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Inconsolata', 'Karla', sans-serif;
   padding: 20px;
   margin: 0;
   font-weight: 400;
@@ -261,6 +261,7 @@ article {
   font-size: 0.8rem;
 }
 .page-navigation {
+  display: none;
   margin: 50px auto 0 auto;
   a {
     display: inline-block;
