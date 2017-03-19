@@ -7,4 +7,6 @@ Hello.
 
 Just some notes I want to write down.
 
-This blog is hosted on [Github](https://github.com) using theme modified from [the-plain](the-plain).
+Picture on the front page: Chales Chaplin met Helen Keller
+
+This site is hosted on [Github](https://github.com) using theme modified from [the-plain](https://github.com/heiswayi/the-plain).
