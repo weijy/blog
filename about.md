@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 关于
 ---
 
 <center>封面图片：查尔斯·卓别初遇林海伦·凯勒。</center>
