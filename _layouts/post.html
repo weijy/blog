@@ -1,11 +1,12 @@
 ---
-layout: no_header_footer
+layout: default
 ---
 
 <article>
 
 	<div class="center">
 		<h2 class="title">{{ page.title }}</h2>
+		<time class="code">{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</time>
 	</div>
 
 	<div class="post-divider"></div>
@@ -13,10 +14,6 @@ layout: no_header_footer
 	{{ content }}
 
     <div class="post-divider"></div>
-
-    <div class="post-time">
-        <time class="code">{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</time>
-    </div>
 
 </article>
 <!--
