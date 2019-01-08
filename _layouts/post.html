@@ -14,7 +14,9 @@ layout: no_header_footer
 
     <div class="post-divider"></div>
 
-    <time class="post-time">{{ page.date | date: "%Y 年 %m 月 %d 日" }}</time>
+    <div class="post-time">
+        <time class="code">{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</time>
+    </div>
 
 </article>
 <!--
