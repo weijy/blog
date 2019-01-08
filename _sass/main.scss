@@ -78,7 +78,7 @@ mark {
   padding: 0 5px;
 }
 
-/* blockquote */ 
+/* blockquote */
 
 blockquote {
   margin: 1.5rem 0;
@@ -88,7 +88,7 @@ blockquote {
   line-height: 1.8rem;
   border-left: 3px solid #D0E5F2;
   font-size: 1.5rem;
-} 
+}
 
 .logo {
   position: relative;
@@ -185,6 +185,10 @@ sup {
 }
 time {
   color: #555;
+}
+.post-time {
+  text-align: right;
+  margin-right: 50;
 }
 code,
 pre,
