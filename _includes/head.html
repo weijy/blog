@@ -3,43 +3,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 {% if page.title %}
-	<title>{{ page.title }}</title>
+	<title>{{ page.title }} · {{ site.title }}</title>
 {% else %}
 	<title>{{ site.title }}</title>
 {% endif %}
 
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
-<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/touch-icon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/core.css">
-<link rel="canonical" href="{{ page.url | prepend: site.baseurl }}">
-<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
+<link rel="icon" href="{{ "/assets/favicon.png" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="apple-touch-icon" href="{{ "/assets/touch-icon.png" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="stylesheet" href="{{ "/assets/core.css" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
+{% if site.mathjax %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}
+
+
+<!-- Baidu Tongji -->
+{% if site.tj_track_id %}
 <script>
-    $(function(){
-    arrMusicID = [33469292,32648543,28287132,26511034,435305771,27588029,41462985,28656150,4010799];  //musicID array
-    musicID = Math.floor(Math.random()*(arrMusicID.length)) //get a ran num as index
-    $('body').css('height',document.documentElement.clientHeight -5);
-
-    if (!Number.isInteger(arrMusicID[musicID])) return; // load failed, bye~
-
-    var iframe = document.createElement('iframe');
-    iframe.id="bgm";
-    iframe.style = "position: absolute; bottom: 0; left: 30px; border: 0px;";
-    iframe.src = '//music.163.com/outchain/player?type=2&id=' +arrMusicID[musicID]+ '&auto=1&height=32';
-    console.log(iframe.src)
-    iframe.frameborder="no";
-    iframe.marginwidth="0";
-    iframe.marginheight="0";
-    iframe.width=250;
-    iframe.height=52;
-    document.body.appendChild(iframe);
-});
+	// id
+    var _tjId = '{{ site.tj_track_id }}';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _tjId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
 </script>
-
-{% if site.mathjax == true %}
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-{% endif %}   
+{% endif %}

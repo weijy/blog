@@ -1,26 +1,65 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 body {
-  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333333;
   padding: 20px;
   margin: 0;
-  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   @media (min-width: 992px) {
     padding: 35px 50px;
   }
 }
+h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 45px 0 25px;
+h5,
+h6 {
+    margin-bottom: 1rem;
+    line-height: 1.25;
+    color: #313131;
+}
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+h4,
+h5,
+h6 {
+  margin-top: 1.1rem;
+  font-size: 1.1rem;
 }
 img {
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
-img.center {
-    display: block;
-    margin: 0 auto;
+video {
+  max-width: 100%;
 }
 a {
   color: inherit;
@@ -38,6 +77,9 @@ mark {
   background: #fffc76;
   padding: 0 5px;
 }
+
+/* blockquote */ 
+
 blockquote {
   margin: 1.5rem 0;
   padding: 0 0 0 10px;
@@ -46,7 +88,8 @@ blockquote {
   line-height: 1.8rem;
   border-left: 3px solid #D0E5F2;
   font-size: 1.5rem;
-}
+} 
+
 .logo {
   position: relative;
   margin: 0 auto 35px;
@@ -58,6 +101,7 @@ blockquote {
   -webkit-animation-fill-mode: both;
   -webkit-animation-name: bounce;
   a {
+    background: #ddd url("logo_wrapper.png");
     color: #000;
     text-decoration: none;
     font-weight: 700;
@@ -78,8 +122,8 @@ blockquote {
     &:focus + .logo-prompt {
       display: inline-block !important;
     }
-    .gravatar {
-      //margin-top: 5px;
+    .logo-avatar {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
@@ -143,14 +187,19 @@ time {
   color: #555;
 }
 code,
-pre {
-  font-family: Consolas, monospace, x;
+pre,
+.code,
+.footnotes {
+  font-family: Consolas, monaco, monospace;
 }
 code {
   color: #f14e32;
   background: #eee;
   padding: 2px 6px;
   font-size: 13px;
+}
+.code_time {
+  font-size: 11px;
 }
 pre {
   display: block;
@@ -190,11 +239,12 @@ iframe {
   width: 100%;
 }
 article {
-  max-width: 550px;
+  max-width: 500px;
   margin: 0 auto;
-  .title {
+  h1.title {
     line-height: 1.4em;
     text-align: center;
+    font-size: 1.4em;
   }
   .divider {
     background: #ddd;
@@ -203,6 +253,14 @@ article {
     background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
     height: 1px;
     margin: 2em 0;
+  }
+  .post-divider {
+    background: #ddd;
+    background: -webkit-gradient(linear,left top,right top,from(rgba(180,180,180,0)),color-stop(#ccc),to(rgba(180,180,180,0)));
+    background: -webkit-linear-gradient(left,rgba(180,180,180,0),#ccc,rgba(180,180,180,0));
+    background: linear-gradient(to right,rgba(180,180,180,0),#ccc,rgba(180,180,180,0));
+    height: 1px;
+    margin: 1.5em 0;
   }
   .center {
     text-align: center;
@@ -220,11 +278,16 @@ article {
   }
   .footnote {
     border: 0;
-    color: #0087BE;
+    background-color: #0087BE;
+    color: #fff;
+    padding-left: 2px;
+    padding-right: 2px;
   }
   .footnotes {
     margin: 50px auto;
     display: block;
+    font-size: 0.8em;
+    color: #666;
     p {
       line-height: 1rem;
       font-weight: normal;
@@ -240,6 +303,10 @@ article {
       border: 0;
       color: #0087BE;
     }
+  }
+  a:hover {
+    color: #369;
+    border-color: #369;
   }
 }
 .back {
@@ -263,12 +330,11 @@ article {
 .page-navigation,
 .footer {
   text-align: center;
-  max-width: 550px;
+  max-width: 500px;
   margin: 0 auto;
   font-size: 0.8rem;
 }
 .page-navigation {
-  display: none;
   margin: 50px auto 0 auto;
   a {
     display: inline-block;
@@ -288,7 +354,7 @@ article {
   }
 }
 section {
-  max-width: 550px;
+  max-width: 500px;
   margin: 0 auto 50px auto;
   ul {
     list-style: none;
@@ -359,5 +425,19 @@ section {
   }
   100% {
     -webkit-transform: none;
+  }
+}
+
+
+p.readmore {
+  text-align:right;
+  font-size: 1.4rem;
+}
+
+.timeline_post_title {
+  line-height: 1;
+  font-weight: normal;
+  a {
+    border-bottom: none;
   }
 }

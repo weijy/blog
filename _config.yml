@@ -1,5 +1,6 @@
 # Site Info
 title:              "Wei's Notes"
+logo_url:           "/assets/images/jingyu.jpg"
 description:        "Just some notes."
 
 # Author Info
@@ -11,6 +12,7 @@ baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
 permalink:          /note/:title # Post permalink
 timezone:           Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            false  # enables support for mathjax - set to false to disable
+tj_track_id:        14b683def2184e3a3cd772efac8770cc
 
 # Site Build
 highlighter:        rouge
