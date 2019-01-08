@@ -9,7 +9,7 @@ author_email:       wei@weijingyu.com
 
 # Site Settings
 baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
-permalink:          /note/:title # Post permalink
+permalink:          /note/:year/:title # Post permalink
 timezone:           Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            false  # enables support for mathjax - set to false to disable
 tj_track_id:        14b683def2184e3a3cd772efac8770cc
