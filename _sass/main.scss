@@ -194,7 +194,7 @@ code,
 pre,
 .code,
 .footnotes {
-  font-family: Consolas, monaco, monospace;
+  font-family: Consolas, monaco, Microsoft YaHei, monospace;
 }
 code {
   color: #f14e32;
@@ -249,6 +249,11 @@ article {
     line-height: 1.4em;
     text-align: center;
     font-size: 1.4em;
+  }
+  h2.title {
+    line-height: 1.4em;
+    text-align: center;
+    font-weight: normal;
   }
   .divider {
     background: #ddd;
