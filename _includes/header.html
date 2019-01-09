@@ -12,6 +12,9 @@
 		<img src="{{ site.logo_url }}" class="logo-avatar">
 	</a>
 	<span class="logo-prompt">{{ prompt }}</span>
-	<p>{{ site.description }}</p>
+
+	{% if page.url == '/index.html' or page.url == '/' %}
+		<p>{{ site.description }}</p>
+	{% endif %}
 
 </aside>
