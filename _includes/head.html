@@ -38,13 +38,3 @@
     })();
 </script>
 {% endif %}
-
-
-{% if page.url == '/index.html' or page.url == '/' %}
-<script type="text/javascript">
-
-    var quotes = [{% for quote in site.data.quotes %}"{{ quote.quote }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
-
-    var auhtors = [{% for quote in site.data.quotes %}"{{ quote.author }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
-</script>
-{% endif %}

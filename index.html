@@ -5,12 +5,5 @@ layout: default
 <article>
 	<img src="/assets/images/zhuobielin_hailunkaile.jpg">
     <div class="divider"></div>
-    <script type="text/javascript">
-        var quotesCount = quotes.length;
-        var randomIndex = Math.floor(Math.random() * quotesCount);
-        var quote = quotes[randomIndex];
-        var author = authors[randomIndex];
-        var divRandomQuote = $("#random_quote");
-        document.write('<center>' + quote + '<br /><cite>—— ' + author + '  <a href="/quotes">>></a></cite></center>');
-    </script>
+    <div id="random_quote"></div>
 </article>

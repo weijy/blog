@@ -3,7 +3,7 @@
 
 <script type="text/javascript">
     function generateRandomQuote() {
-        $.getJSON("data/quotes.json", function(quotes) {
+        $.getJSON("/data/quotes.json", function(quotes) {
             var quotesCount = quotes.length;
             var randomIndex;
             randomIndex = Math.floor(Math.random() * quotesCount);
