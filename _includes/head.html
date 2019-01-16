@@ -38,3 +38,27 @@
     })();
 </script>
 {% endif %}
+
+
+{% if page.url == '/index.html' or page.url == '/' %}
+<script type="text/javascript">
+
+    var quotes = [{% for quote in site.data.quotes %}"{{ quote.quote }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+    var auhtors = [{% for quote in site.data.quotes %}"{{ quote.author }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+    function generateRandomQuote() {
+        var quotesCount = quotes.length;
+        var randomIndex = Math.floor(Math.random() * quotesCount);
+        var quote = quotes[randomIndex];
+        var author = authors[randomIndex];
+        var divRandomQuote = $("#random_quote");
+        divRandomQuote.append('<center>' + quote + '<br /><cite>—— ' + author + '  <a href="/quotes">>></a></cite></center>');
+    }
+
+    $(document).ready(function() {
+        generateRandomQuote();
+    });
+
+</script>
+{% endif %}

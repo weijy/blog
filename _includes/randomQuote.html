@@ -1,17 +1,12 @@
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
 <script type="text/javascript">
     function generateRandomQuote() {
-        $.getJSON("data/quotes.json", function(quotes) {
-            var quotesCount = quotes.length;
-            var randomIndex;
-            randomIndex = Math.floor(Math.random() * quotesCount);
-            var quote = quotes[randomIndex].quote;
-            var author = quotes[randomIndex].author;
-            var divRandomQuote = $("#random_quote");
-            divRandomQuote.append('<center>' + quote + '<br /><cite>—— ' + author + '  <a href="/quotes">>></a></cite></center>');
-        });
+        var quotesCount = quotes.length;
+        var randomIndex;
+        randomIndex = Math.floor(Math.random() * quotesCount);
+        var quote = quotes[randomIndex];
+        var author = authors[randomIndex];
+        var divRandomQuote = $("#random_quote");
+        divRandomQuote.append('<center>' + quote + '<br /><cite>—— ' + author + '  <a href="/quotes">>></a></cite></center>');
     }
 
     $(document).ready(function() {
