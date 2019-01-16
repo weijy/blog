@@ -83,9 +83,8 @@ mark {
 /* blockquote */
 
 blockquote {
-  padding: 2px 0 2px 15px;
+  padding: 0 0 0 15px;
   font-style: normal;
-  font-size: 100%;
   line-height: 1.8rem;
   border-left: 3px solid #D0E5F2;
   font-size: 1.1rem;
@@ -189,6 +188,7 @@ time {
 }
 cite {
   font-size: 13px;
+  font-style: inherit;
 }
 .post-time {
   text-align: right;
