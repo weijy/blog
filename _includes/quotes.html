@@ -1,0 +1,17 @@
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script type="text/javascript">
+    function generateQuotes() {
+        $.getJSON("data/quotes.json", function(qutoes) {
+            var divQuotes = $("#quotes");
+            quotes.forEach((quote, author) => {
+              divQuotes.append('<blockquote>&ldquo;' + quote + '&rdquo; <cite>' + author + '</cite></blockquote>');
+            });
+        });
+    }
+
+    $(document).ready(function() {
+        generateQuotes();
+    });
+</script>

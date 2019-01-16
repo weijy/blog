@@ -1,0 +1,21 @@
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script type="text/javascript">
+    function generateRandomQuote() {
+        $.getJSON("data/quotes.json", function(data) {
+            var quotesCount = data.length;
+            var randomIndex;
+            var quotes = data;
+            randomIndex = Math.floor(Math.random() * quotesCount);
+            var quote = quotes[randomIndex].quote;
+            var author = quotes[randomIndex].author;
+            var divRandomQuote = $("#random_quote");
+            divRandomQuote.append('<blockquote>&ldquo;' + quote + '&rdquo; <cite>' + author + '</cite></blockquote>');
+        });
+    }
+
+    $(document).ready(function() {
+        generateRandomQuote();
+    });
+</script>

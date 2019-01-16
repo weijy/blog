@@ -3,6 +3,13 @@
 
 	<head>
 		{% include head.html %}
+
+		{% if page.url == '/index.html' or page.url == '/' %}
+			{% include randomQuotes.html %}
+		{% endif %}
+		{% if page.url == '/quotes' %}
+			{% include quotes.html %}
+		{% endif %}
 	</head>
 
 	<body>
