@@ -15,10 +15,10 @@ mathjax:            false  # enables support for mathjax - set to false to disab
 ba_track_id:        14b683def2184e3a3cd772efac8770cc
 
 # Site Build
-# highlighter:        rouge
-# markdown:           kramdown
-# kramdown:
-#     input:          GFM
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
 sass:
     style:          :compressed
 
