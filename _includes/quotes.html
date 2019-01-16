@@ -5,9 +5,9 @@
     function generateQuotes() {
         $.getJSON("data/quotes.json", function(qutoes) {
             var divQuotes = $("#quotes");
-            quotes.forEach((quote, author) => {
-              divQuotes.append('<blockquote>&ldquo;' + quote + '&rdquo; <cite>' + author + '</cite></blockquote>');
-            });
+            for (var quote in quotes) {
+              divQuotes.append('<blockquote><p>&ldquo;' + quote.quote + '&rdquo; <cite>' + quote.author + '</cite></p></blockquote>');
+            }
         });
     }
 
