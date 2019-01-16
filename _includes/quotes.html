@@ -4,9 +4,10 @@
 <script type="text/javascript">
     function generateQuotes() {
         $.getJSON("data/quotes.json", function(qutoes) {
+            var quotesCount = quotes.length;
             var divQuotes = $("#quotes");
-            for (var quote in quotes) {
-              divQuotes.append('<blockquote><p>&ldquo;' + quote.quote + '&rdquo; <cite>' + quote.author + '</cite></p></blockquote>');
+            for (let i = 0; i < quotesCount; i++) {
+              divQuotes.append('<blockquote><p>&ldquo;' + quotes[i].quote + '&rdquo; <cite>' + quotes[i].author + '</cite></p></blockquote>');
             }
         });
     }
