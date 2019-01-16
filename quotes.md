@@ -1,6 +1,7 @@
 ---
 layout: page
-title: 退役的
+title: 首页随机出现
 ---
 
-<div id="all_quotes"></div>
+{% for quote in site.data.quotes %}
+<blockquote>&ldquo;' + quote.quote + '&rdquo;  <cite>' + quote.author + '</cite></blockquote>
