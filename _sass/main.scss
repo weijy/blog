@@ -186,12 +186,17 @@ sup {
 time {
   color: #555;
 }
-cite {
-  font-size: 13px;
-  font-style: inherit;
-  text-align: right;
-  padding-right: 20px;
+.quote {
+  float: left;
+  width: 80%;
 }
+.author {
+  float: left;
+  width: 20%;
+  text-align: right;
+  font-size: 13px;
+}
+
 .post-time {
   text-align: right;
   margin-right: 50;
