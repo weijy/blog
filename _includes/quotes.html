@@ -7,7 +7,7 @@
             var divQuotes = $("#all_quotes");
             var i;
             for (i = 0; i < quotes.length; i++) {
-              divQuotes.append('<blockquote><p>&ldquo;' + quotes[i].quote + '&rdquo;  <cite>' + quotes[i].author + '</cite></p></blockquote>');
+              divQuotes.append('<blockquote>&ldquo;' + quotes[i].quote + '&rdquo;  <cite class>' + quotes[i].author + '</cite></blockquote>');
             }
         });
     }
