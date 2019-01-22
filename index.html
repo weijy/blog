@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
-<script type="text/javascript">
-    var quotesCount = AllQuotes.length;
-    var randomIndex =  Math.floor(Math.random() * quotesCount);
-    var quote = AllQuotes[randomIndex];
-    var author = AllAuthors[randomIndex];
-    var content = '<center>' + quote + '</center><p class="author">—— ' + author + '</p>';
-    document.getElementById("random_quote").innerHTML = content;
-</script>
 
 <article>
 	<img src="/assets/images/zhuobielin_hailunkaile.jpg">
     <div class="divider"></div>
-    <div id="random_quote"></div>
+    <div id="random_quote">
+        <script type="text/javascript">
+            var quotesCount = AllQuotes.length;
+            var randomIndex =  Math.floor(Math.random() * quotesCount);
+            var quote = AllQuotes[randomIndex];
+            var author = AllAuthors[randomIndex];
+            var content = '<center>' + quote + '</center><p class="author">—— ' + author + '</p>';
+            document.write(content);
+        </script>
+    </div>
 </article>
