@@ -19,13 +19,6 @@
     });
 -->
 <script type="text/javascript">
-    var quotes = [{% for quote in site.data.quotes %}"{{ quote.quote }}"{% unless forloop.last% }, {% endunless %}{% endfor %}]
-    var authors = [{% for quote in site.data.quotes %}"{{ quote.author }}"{% unless forloop.last% }, {% endunless %}{% endfor %}]
-
-    var quotesCount = quotes.length;
-    var randomIndex =  Math.floor(Math.random() * quotesCount);
-    var quote = quotes[randomIndex];
-    var author = authors[randomIndex];
-    var content = '<center>' + quote + '</center><p class="author">—— ' + author + '</p>';
-    document.getElementById("random_quote").innerHTML = content;
+    var AllQuotes = [{% for quote in site.data.quotes %}"{{ quote.quote }}"{% unless forloop.last% }, {% endunless %}{% endfor %}]
+    var AllAuthors = [{% for quote in site.data.quotes %}"{{ quote.author }}"{% unless forloop.last% }, {% endunless %}{% endfor %}]
 </script>
