@@ -8,12 +8,11 @@ layout: default
     <div id="random_quote">
         <script type="text/javascript">
             var quotesCount = quotes.length;
-            var randomIndex;
-            randomIndex = Math.floor(Math.random() * quotesCount);
+            var randomIndex =  Math.floor(Math.random() * quotesCount);
             var quote = quotes[randomIndex];
             var author = authors[randomIndex];
             var content = '<center>' + quote + '</center><p class="author">—— ' + author + '</p>';
-            document.getElementById("random_quote").innerHTML = content;
+            document.write(content);
         </script>
     </div>
 </article>
