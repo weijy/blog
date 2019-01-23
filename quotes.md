@@ -3,8 +3,6 @@ layout: page
 title: 首页随机出现
 ---
 
-看到觉得好就记了下来。
-
 {% for quote in site.data.quotes %}
 
 > {{ quote.quote }} <cite>—— {{ quote.author }}</cite>
