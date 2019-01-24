@@ -7,7 +7,7 @@ title: 首页随机出现
 
 > {{ quote.quote }}
 
-——{{ quote.author }} {: .cite}
+<p class="cite">——{{ quote.author }}</p>
 
 {% endfor %}
 <!--
