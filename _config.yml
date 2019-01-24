@@ -16,7 +16,7 @@ ba_track_id:        14b683def2184e3a3cd772efac8770cc
 
 # Site Build
 highlighter:        rouge
-markdown:           kramdown
+markdown:           Pandoc
 kramdown:
     input:          GFM
 sass:
