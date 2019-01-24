@@ -287,12 +287,6 @@ article {
     line-height: 1.9em;
     word-wrap: break-word;
   }
-  p.cite {
-    line-height: 1em;
-    font-size: 13px;
-    test-align: right;
-    margin: 0;
-  }
   .footnote {
     border: 0;
     background-color: #0087BE;
@@ -471,4 +465,9 @@ p.readmore {
   font-size: 13px;
   padding-right: 20px;
   color: #666;
+}
+cite {
+  font-size: 13px;
+  text-align: right;
+  margin: 0;
 }
