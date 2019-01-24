@@ -455,6 +455,7 @@ p.readmore {
 .random_quote {
   width: 100%;
   text-align: center;
+  margin: 0 10px;
 }
 .quote {
   width: auto;
@@ -465,5 +466,6 @@ p.readmore {
   text-align: right;
   font-size: 13px;
   padding-right: 20px;
-  margin-right: 0;
+  margin: 0;
+  color: #666;
 }
