@@ -187,12 +187,6 @@ sup {
 time {
   color: #555;
 }
-.author {
-  text-align: right;
-  font-size: 13px;
-  padding-right: 20px;
-  margin-right: 0;
-}
 
 .post-time {
   text-align: right;
@@ -457,12 +451,19 @@ p.readmore {
 .cite {
   font-size: 13px;
 }
+
 .random_quote {
   width: 100%;
   text-align: center;
 }
-
 .quote {
   width: auto;
   display: inline-block;
+  text-align: left;
+}
+.author {
+  text-align: right;
+  font-size: 13px;
+  padding-right: 20px;
+  margin-right: 0;
 }
