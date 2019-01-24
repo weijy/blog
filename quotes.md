@@ -5,9 +5,7 @@ title: 首页随机出现
 
 {% for quote in site.data.quotes %}
 
-> {{ quote.quote }}
-
-<p class="cite">——{{ quote.author }}</p>
+> {{ quote.quote }} <cite>——{{ quote.author }}</cite>
 
 {% endfor %}
 <!--
