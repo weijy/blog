@@ -287,6 +287,12 @@ article {
     line-height: 1.9em;
     word-wrap: break-word;
   }
+  p.cite {
+    line-height: 1em;
+    font-size: 13px;
+    test-align: right;
+    margin: 0;
+  }
   .footnote {
     border: 0;
     background-color: #0087BE;
@@ -447,10 +453,6 @@ p.readmore {
 .timeline_post_title {
   line-height: 1;
   font-weight: normal;
-}
-.cite {
-  font-size: 13px;
-  test-align: right;
 }
 
 .random_quote {
