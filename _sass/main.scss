@@ -64,9 +64,9 @@ video {
   max-width: 100%;
 }
 a {
-  color: inherit;
+  color: #0366d6;
   text-decoration: none;
-  border-bottom: 1px solid #555;
+  /* border-bottom: 1px solid #555; */
   &.image {
     display: block;
     text-align: center;
@@ -322,8 +322,7 @@ article {
     }
   }
   a:hover {
-    color: #369;
-    border-color: #369;
+    border-bottom: 1px solid;
   }
 }
 .back {
@@ -443,7 +442,7 @@ section {
   100% {
     -webkit-transform: none;
   }
-}
+}z
 
 
 p.readmore {
@@ -454,10 +453,13 @@ p.readmore {
 .timeline_post_title {
   line-height: 1;
   font-weight: normal;
-  a {
-    border-bottom: none;
-  }
 }
 .cite {
   font-size: 13px;
+}
+.quote {
+  floate: center;
+  width:fit-content;
+  width:-webkit-fit-content;
+  width:-moz-fit-content;
 }
