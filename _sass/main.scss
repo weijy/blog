@@ -9,11 +9,11 @@ html {
   height: 100%;
 }
 body {
-  font-size: 14px;
+  font-size: 1.0em;
   line-height: 20px;
   font-weight: normal;
   font-style: normal;
-  font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
+  font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
   color: #333333;
   padding: 20px;
   margin: 0;
@@ -246,7 +246,7 @@ iframe {
 }
 aside {
   p {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 article {
