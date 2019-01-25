@@ -443,12 +443,6 @@ section {
   }
 }
 
-
-p.readmore {
-  text-align:right;
-  font-size: 1.4rem;
-}
-
 .timeline_post_title {
   line-height: 1;
   font-weight: normal;
@@ -467,12 +461,12 @@ p.readmore {
 }
 .author {
   text-align: right;
-  font-size: 13px;
+  font-size: 0.875em;
   padding-right: 10px;
   color: #666;
 }
 cite {
-  font-size: 13px;
+  font-size: 0.875em;
   text-align: right;
   margin: 0;
 }
