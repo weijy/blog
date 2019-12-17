@@ -7,7 +7,7 @@ layout: default
 	<ul>
         {% for post in site.posts %}
         <li>
-            <span class="code">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="code">{{ post.date | date: '%Y/%m/%d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
